@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GrafoOptiLibV2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GrafoOptiLibV2_jar</output-path>
+    <root id="archive" name="GrafoOptiLibV2.jar">
+      <element id="module-output" name="GrafoOptiLibV2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-ooxml-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-javadoc-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-examples-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-excelant-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-ooxml-full-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-ooxml-lite-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/apache_poi/poi-scratchpad-5.1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
