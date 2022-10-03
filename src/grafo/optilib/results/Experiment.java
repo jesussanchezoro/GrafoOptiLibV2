@@ -68,7 +68,7 @@ public class Experiment<I extends Instance, IF extends InstanceFactory<I>, S ext
 		TableCreator.createTable(outputFile, results);
 	}
 
-	public void launch(String instanceDir) {
+	public void launch(String instanceDir, String[] extensions) {
 		Calendar cal = Calendar.getInstance();
 		int day = cal.get(Calendar.DAY_OF_MONTH);
 		int month = cal.get(Calendar.MONTH)+1;
@@ -79,10 +79,9 @@ public class Experiment<I extends Instance, IF extends InstanceFactory<I>, S ext
 		String outDir = "./experiments/"+date;
 		File outDirCreator = new File(outDir);
 		outDirCreator.mkdirs();
-		String[] extensions = new String[]{".txt"};
 
 		for (Algorithm<I,S> algorithm : algorithms) {
-			String outputFile = outDir + "/" + algorithm.toString() + ".xlsx";
+			String outputFile = outDir + "/" + algorithm.toString() + ".csv";
 			launchAlgorithm(algorithm, instanceDir, outputFile, extensions);
 		}
 	}

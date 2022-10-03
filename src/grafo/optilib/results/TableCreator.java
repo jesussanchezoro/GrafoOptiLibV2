@@ -10,13 +10,15 @@ public class TableCreator {
 
 	public static void createTable(String outputFile, List<Result> results) {
 		try (PrintWriter pw = new PrintWriter(outputFile)) {
+			pw.print("Instance");
 			for (ResultInfo info : results.get(0).getResults()) {
-				pw.print(info.getName()+"\t");
+				pw.print("\t"+info.getName());
 			}
 			pw.println();
 			for (Result r : results) {
+				pw.print(r.getInstanceName());
 				for (ResultInfo info : r.getResults()) {
-					pw.print(info.getValue()+"\t");
+					pw.print("\t"+info.getValue());
 				}
 				pw.println();
 			}
