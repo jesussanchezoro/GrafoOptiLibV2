@@ -68,20 +68,20 @@ public class Experiment<I extends Instance, IF extends InstanceFactory<I>, S ext
 		TableCreator.createTable(outputFile, results);
 	}
 
-	public void launch(String instanceDir, String[] extensions) {
+	public void launch(String outDir, String instanceDir, String[] extensions) {
 		Calendar cal = Calendar.getInstance();
 		int day = cal.get(Calendar.DAY_OF_MONTH);
 		int month = cal.get(Calendar.MONTH)+1;
 		int year = cal.get(Calendar.YEAR);
 
-		String date = String.format("%04d-%02d-%02d", year, month, day);
+//		String date = String.format("%04d-%02d-%02d", year, month, day);
 
-		String outDir = "./experiments/"+date;
+//		String outDir = "./experiments/"+date;
 		File outDirCreator = new File(outDir);
 		outDirCreator.mkdirs();
 
 		for (Algorithm<I,S> algorithm : algorithms) {
-			String outputFile = outDir + "/" + algorithm.toString() + ".csv";
+			String outputFile = outDir + "/" + algorithm.toString() + ".xlsx";
 			launchAlgorithm(algorithm, instanceDir, outputFile, extensions);
 		}
 	}
